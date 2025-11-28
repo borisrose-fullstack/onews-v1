@@ -1,0 +1,72 @@
+
+:root {
+    --app-font: sans-serif;
+    --link-article-color: #007bff;
+    --link-article-hover: #0056b3;
+    --header-color:  #f9f9f9;
+    --article-border-color: #eaeaea;
+    --work-tag-color: #0766F0;
+    --team-tag-color: #DC5E53;
+    --news-tag-color: #98DC62;
+    --police-tag-color: #000000;
+    --justice-tag-color: #5b2768;
+
+}
+
+html {
+    font-family: var(--app-font);
+}
+
+
+.tag {
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.8rem;
+    padding: .4rem;
+    border-radius: 3px;
+}
+
+.tag--news {
+    background-color: var(--news-tag-color);
+}
+
+.tag--justice {
+    background-color: var(--justice-tag-color);
+
+}
+
+.tag--police {
+    background-color: var(--police-tag-color);
+}
+
+
+.tag--team {
+    background-color: var(--team-tag-color);
+}
+
+.tag--work {
+    background-color: var(--work-tag-color);
+    
+}
+
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+figure {
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+

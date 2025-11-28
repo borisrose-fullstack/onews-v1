@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr-FR" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/landing.css">
+    <title>O'Clock Students News</title>
+</head>
+<body>
+    <div id="container" aria-label="élément contenant le contenu de la page">
+        <main class="landing__main">
+            <section class="landing-main__left-section">
+                <header class="landing-main__left-header">
+                    <figure>
+                        <img src="/images/onews.svg" alt="Image du logo de ONews">
+                    </figure>
+                    <h1>
+                        <span aria-label="O'CLOCK">O'CLOCK</span> 
+                        <span aria-label="STUDENTS">STUDENTS</span>
+                        <span aria-label="NEWS">NEWS</span>
+                     </h1>
+                </header>
+                <section class="landing-main__latest-news">
+                    <h2>Latest news <span>from our students</span></h2>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque blanditiis animi incidunt aliquid itaque similique praesentium, odit commodi facere mollitia asperiores unde sunt, repudiandae, ratione deleniti doloremque magni maiores laboriosam?Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                </section>
+                <footer class="landing-main__footer">
+                    <ul>
+                    {{#each footerNavBarItems}}
+                        <li><a href=#>{{this}}</a></li>
+                    {{/each}}
+                    </ul>
+                </footer>
+            </section>
+            <section class="landing-main__right-section">
+                <header class="landing-main__right-header">
+                    <h2>Latest News</h2>
+                </header>
+                <section class="article-cards__list">
+                    {{#each articles}}
+                        <article class="article-card">
+                                <header class="article-card__header">
+                                    <section class="article-card__tags">
+                                        {{#each tags }}
+                                            <span aria-label="catégorie de l'article" class="tag tag--{{this}}">{{this}}</span>
+                                        {{/each }}
+                                    </section>
+                                    <h3 class="article-card__title">{{this.title}}</h3>
+
+                                </header>
+                                <section class="article-card__main">
+                                    <section class="article-card__info">
+                                        <figure>
+                                            <img src="{{this.author.photoUrl}}" alt="Image of {{this.author.fullName}}">
+                                        </figure>
+                                        <section>
+                                            <span>{{this.author.fullName}}</span><time>{{this.publishedAt}}</time>
+                                        </section>
+                                    </section>
+
+                                    <section class="article-card__description">
+                                        <p>{{this.content}}</p>
+                                    </section>
+                                </section>
+                                <footer class="article-card__footer">
+                                    <a href="#">Continuer la lecture</a>
+                                </footer>
+                        </article>
+                    {{/each }}
+                </section>
+                
+            </section>
+
+        </main>
+    </div>
+
+</body>
+</html>
