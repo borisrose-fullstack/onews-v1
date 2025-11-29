@@ -147,12 +147,7 @@
 
     .article-card__description {
         display: flex;
-        align-items: center;
-        padding-inline-end: 10px;
-        p {
-            width: max-content;
-            word-wrap: break-word;
-        }
+        margin-block: 10px;
     }
 
     .article-card__info {
@@ -201,7 +196,8 @@
 
 @container cards-list (width <= 600px) {
     .article-card {
-        width: 100%;
+        width: 95%;
+        padding: 10px;
     }
 }
 
